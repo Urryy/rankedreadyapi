@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.FileProviders;
-using RankedReadyApi.Business.Service.Implementations;
 using RankedReadyApi.Middlewares;
 using Stripe;
 
