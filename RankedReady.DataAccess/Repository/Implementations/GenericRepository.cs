@@ -26,7 +26,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         var entityToDelete = await _dbSet.FindAsync(id);
 
-        if(entityToDelete != null)
+        if (entityToDelete != null)
         {
             _dbSet.Remove(entityToDelete);
         }

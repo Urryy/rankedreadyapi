@@ -1,0 +1,15 @@
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\bin\Debug\net7.0\RankedReady.DataAccess.deps.json
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\bin\Debug\net7.0\RankedReady.DataAccess.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\bin\Debug\net7.0\RankedReady.DataAccess.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\bin\Debug\net7.0\RankedReadyApi.Common.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\bin\Debug\net7.0\RankedReadyApi.Common.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.csproj.AssemblyReference.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.AssemblyInfoInputs.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.AssemblyInfo.cs
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.csproj.CoreCompileInputs.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.csproj.CopyComplete
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\refint\RankedReady.DataAccess.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\RankedReady.DataAccess.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReady.DataAccess\obj\Debug\net7.0\ref\RankedReady.DataAccess.dll

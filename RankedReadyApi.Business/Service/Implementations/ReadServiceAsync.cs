@@ -1,12 +1,7 @@
 ﻿using AutoMapper;
 using RankedReady.DataAccess.Repository.Interfaces;
 using RankedReadyApi.Business.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RankedReadyApi.Business.Service.Implementations;
 
@@ -21,6 +16,20 @@ public class ReadServiceAsync<TEntity, TDto> : IReadServiceAsync<TEntity, TDto>
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
+    }
+
+    public async Task<int> Count()
+    {
+        try
+        {
+            var entities = await unitOfWork.Repository<TEntity>().GetAllAsync();
+            return entities.Count();
+        }
+        catch (Exception ex)
+        {
+            var message = $"Error retrieving all {typeof(TDto).Name}s";
+            throw new Exception(message, ex);
+        }
     }
 
     public async Task<IEnumerable<TDto>> GetAllAsync()
@@ -73,11 +82,25 @@ public class ReadServiceAsync<TEntity, TDto> : IReadServiceAsync<TEntity, TDto>
         {
             var entity = await unitOfWork.Repository<TEntity>().GetByIdAsync(id);
 
-            if(entity is null)
+            if (entity is null)
             {
                 throw new Exception($"Entity with ID {id} not found.");
             }
 
+            return mapper.Map<TDto>(entity);
+        }
+        catch (Exception ex)
+        {
+            var message = $"Error retrieving {typeof(TDto).Name} with Id: {id}";
+            throw new Exception(message, ex);
+        }
+    }
+
+    public async Task<TDto> GetOrDefaultAsync(Guid id)
+    {
+        try
+        {
+            var entity = await unitOfWork.Repository<TEntity>().GetByIdAsync(id);
             return mapper.Map<TDto>(entity);
         }
         catch (Exception ex)

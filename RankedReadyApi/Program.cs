@@ -1,7 +1,15 @@
+using RankedReadyApi.CrossCutting.IoC.BuilderApplication;
+using RankedReadyApi.CrossCutting.IoC.InversionDependency;
+using RankedReadyApi.Extension;
+
 var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+var str = $"/skins/{{objectId:Guid}}";
+builder.Services.ConnectDataAccess(builder.Configuration)
+                .ConnectBusiness(builder.Configuration)
+                .InjectCommonAuthorization(builder.Configuration);
 
-app.UseHttpsRedirection();
-
-app.Run();
+builder.Build()
+       .RegisterEndpoints()
+       .ConfigureApplication()
+       .Run();

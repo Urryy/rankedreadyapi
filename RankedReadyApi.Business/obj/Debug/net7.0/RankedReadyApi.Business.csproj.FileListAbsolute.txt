@@ -1,0 +1,17 @@
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReadyApi.Business.deps.json
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReadyApi.Business.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReadyApi.Business.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReady.DataAccess.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReadyApi.Common.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReady.DataAccess.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\bin\Debug\net7.0\RankedReadyApi.Common.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.csproj.AssemblyReference.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.AssemblyInfoInputs.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.AssemblyInfo.cs
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.csproj.CoreCompileInputs.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.csproj.CopyComplete
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\refint\RankedReadyApi.Business.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\RankedReadyApi.Business.pdb
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi.Business\obj\Debug\net7.0\ref\RankedReadyApi.Business.dll

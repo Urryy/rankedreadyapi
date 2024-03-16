@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
 
 namespace RankedReadyApi.Business.Service.Interfaces;
 
@@ -14,5 +9,7 @@ public interface IReadServiceAsync<TEntity, TDto>
     Task<IEnumerable<TDto>> GetAllAsync();
     Task<IEnumerable<TDto>> GetAllByExpressionAsync(Expression<Func<TEntity, bool>> expression);
     Task<TDto> GetAsync(Guid id);
+    Task<TDto> GetOrDefaultAsync(Guid id);
     Task<TDto> GetByExpressionAsync(Expression<Func<TEntity, bool>> expression);
+    Task<int> Count();
 }

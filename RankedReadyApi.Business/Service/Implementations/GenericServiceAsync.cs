@@ -1,12 +1,6 @@
 ﻿using AutoMapper;
 using RankedReady.DataAccess.Repository.Interfaces;
 using RankedReadyApi.Business.Service.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RankedReadyApi.Business.Service.Implementations;
 
@@ -15,7 +9,7 @@ public class GenericServiceAsync<TEntity, TDto> : ReadServiceAsync<TEntity, TDto
     where TEntity : class
 {
     private readonly IUnitOfWork unitOfWork;
-    private readonly IMapper mapper;
+    protected readonly IMapper mapper;
 
     public GenericServiceAsync(IMapper mapper, IUnitOfWork unitOfWork) : base(mapper, unitOfWork)
     {
@@ -23,9 +17,8 @@ public class GenericServiceAsync<TEntity, TDto> : ReadServiceAsync<TEntity, TDto
         this.mapper = mapper;
     }
 
-    public async Task AddAsync(TDto dto)
+    public async Task AddAsync(TEntity entity)
     {
-        var entity = mapper.Map<TEntity>(dto);
         await unitOfWork.Repository<TEntity>().AddAsync(entity);
         await unitOfWork.SaveChangesAsync();
     }
