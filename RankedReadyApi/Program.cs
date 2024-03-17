@@ -11,5 +11,5 @@ builder.Services.ConnectDataAccess(builder.Configuration)
 var app = builder.Build();
 app.RegisterEndpoints()
    .ConfigureApplication()
-   .Run(); 
+   .Run();
 

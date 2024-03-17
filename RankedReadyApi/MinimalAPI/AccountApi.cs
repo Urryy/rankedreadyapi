@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using RankedReadyApi.Attributes;
+﻿using RankedReadyApi.Attributes;
 using RankedReadyApi.Common.Models.User;
 using RankedReadyApi.Handlers;
 

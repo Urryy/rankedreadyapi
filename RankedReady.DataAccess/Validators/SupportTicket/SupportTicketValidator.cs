@@ -1,10 +1,5 @@
 ﻿using FluentValidation;
 using RankedReadyApi.Common.Models.SupportTicket;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RankedReady.DataAccess.Validators.SupportTicket;
 
@@ -26,5 +21,5 @@ public static class SupportTicketValidator
             RuleFor(x => x.TicketId).NotNull().NotEqual(Guid.Empty).WithMessage("Ticket Id is null or empty");
             RuleFor(x => x.Text).NotNull().NotEmpty().WithMessage("Message is null or empty");
         }
-    } 
+    }
 }

@@ -21,7 +21,7 @@ public static class InjectAuthorization
             opt.SaveToken = true;
             opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
             {
-                ValidateIssuer = true, 
+                ValidateIssuer = true,
                 ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,

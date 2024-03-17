@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RankedReadyApi.Attributes;
 using RankedReadyApi.Business.Accessors;
 using RankedReadyApi.Business.Service.Interfaces;

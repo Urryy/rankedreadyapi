@@ -44,9 +44,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Http.Features": {
+            "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[5.0.17, )"
+              "version": "[2.1.34, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -59,6 +59,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.16, )"
+            },
+            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
+              "target": "Package",
+              "version": "[7.4.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

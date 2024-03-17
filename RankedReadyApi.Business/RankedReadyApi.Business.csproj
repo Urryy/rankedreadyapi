@@ -10,8 +10,6 @@
     <PackageReference Include="ClosedXML" Version="0.102.2" />
     <PackageReference Include="FluentEmail.Core" Version="3.0.2" />
     <PackageReference Include="FluentEmail.Smtp" Version="3.0.2" />
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.34" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
