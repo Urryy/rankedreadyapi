@@ -1,4 +1,5 @@
-﻿using RankedReadyApi.Attributes;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RankedReadyApi.Attributes;
 using RankedReadyApi.Common.Models.User;
 using RankedReadyApi.Handlers;
 
@@ -6,7 +7,7 @@ namespace RankedReadyApi.MinimalAPI
 {
     public static class AccountApi
     {
-        private static string ENDPOINT_V1 = "api/v1/account";
+        private static string ENDPOINT_V1 = "/api/v1/account";
         public static void RegisterAccountApi(this WebApplication app)
         {
             app.MapPost($"{ENDPOINT_V1}/login", AccountHandler.Login)

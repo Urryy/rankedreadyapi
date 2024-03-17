@@ -15,7 +15,6 @@ public static class InjectBusiness
     public static IServiceCollection ConnectBusiness(this IServiceCollection services, IConfiguration configuration)
     {
         services.InjectEmailServices();
-        services.InjectCors();
         services.InjectServices();
         services.InjectAccessors();
         services.InjectLogging();
@@ -26,11 +25,6 @@ public static class InjectBusiness
     {
         services.AddFluentEmail("rankedready@gmail.com")
             .AddSmtpSender("smtp.gmail.com", 587, "yatsko19791@gmail.com", "huij qmww ywgk azba");
-    }
-
-    private static void InjectCors(this IServiceCollection services)
-    {
-        services.AddCors();
     }
 
     private static void InjectServices(this IServiceCollection services)

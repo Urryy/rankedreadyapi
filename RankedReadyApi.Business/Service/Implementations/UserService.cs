@@ -120,7 +120,7 @@ public class UserService : GenericServiceAsync<User, UserDto>, IUserService
             throw new Exception("Mismatch in passwords");
         }
 
-        var user = new User(model.Email, model.Password, Role.User);
+        var user = new User(model.Email, HashPasswordHelper.HashPassword(model.Password), Role.User);
         await AddAsync(user);
 
         var userDto = mapper.Map<UserDto, UserWithoutCredDto>(await GetAsync(user.Id));

@@ -18,7 +18,6 @@ public class ApplicationDataBaseContext : DbContext
 
     public ApplicationDataBaseContext(DbContextOptions<ApplicationDataBaseContext> options) : base(options)
     {
-
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

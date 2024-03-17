@@ -70,7 +70,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.4.0, )"
+              "version": "[7.4.1, )"
             }
           },
           "imports": [
@@ -309,11 +309,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[7.0.17, )"
-            },
-            "Microsoft.AspNetCore.Authorization": {
-              "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.14, )"
             }
           },
           "imports": [

@@ -38,14 +38,7 @@ public class ReadServiceAsync<TEntity, TDto> : IReadServiceAsync<TEntity, TDto>
         {
             var entities = await unitOfWork.Repository<TEntity>().GetAllAsync();
 
-            if (entities.Any())
-            {
-                return mapper.Map<IEnumerable<TDto>>(entities);
-            }
-            else
-            {
-                throw new Exception($"No {typeof(TDto).Name}s were found");
-            }
+            return mapper.Map<IEnumerable<TDto>>(entities);
         }
         catch (Exception ex)
         {

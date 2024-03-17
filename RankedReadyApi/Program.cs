@@ -3,13 +3,13 @@ using RankedReadyApi.CrossCutting.IoC.InversionDependency;
 using RankedReadyApi.Extension;
 
 var builder = WebApplication.CreateBuilder(args);
-
-var str = $"/skins/{{objectId:Guid}}";
 builder.Services.ConnectDataAccess(builder.Configuration)
+                .InjectCommonAuthorization(builder.Configuration)
                 .ConnectBusiness(builder.Configuration)
-                .InjectCommonAuthorization(builder.Configuration);
+                .AddControllers();
 
-builder.Build()
-       .RegisterEndpoints()
-       .ConfigureApplication()
-       .Run();
+var app = builder.Build();
+app.RegisterEndpoints()
+   .ConfigureApplication()
+   .Run(); 
+

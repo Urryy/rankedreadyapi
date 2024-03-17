@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RankedReadyApi.Attributes;
 using RankedReadyApi.Business.Accessors;
 using RankedReadyApi.Business.Service.Interfaces;
@@ -57,7 +58,6 @@ namespace RankedReadyApi.Handlers
             var users = await srvcUser.GetUsers();
             return Results.Json(users);
         }
-
 
         public static async Task<IResult> GetUserProfile(
             IUserService srvcUser,
