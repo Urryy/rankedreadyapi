@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using RankedReadyApi.Common.DataTransferObjects.User;
+using RankedReadyApi.Common.Entities;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,16 +13,16 @@ namespace RankedReadyApi.DataAccess.Extensions;
 public static class JwtAuthExtension
 {
     private static readonly int _tokenExpires = 168;
-
     public static List<Claim> CreateClaims(this UserWithoutCredDto user)
     => new List<Claim>
         {
-                new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString(CultureInfo.InvariantCulture)),
-                new(ClaimTypes.NameIdentifier, user.Id),
-                new(ClaimTypes.Email, user.Email),
-                new(ClaimTypes.Role, user.Role),
+            new(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+            new(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString(CultureInfo.InvariantCulture)),
+            new(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new(ClaimTypes.Email, user.Email!),
+            new(ClaimTypes.Role, user.Role.ToString()),
         };
+
 
     public static SigningCredentials CreateSigningCredentials(this IConfiguration configuration)
     => new SigningCredentials(
@@ -29,6 +30,7 @@ public static class JwtAuthExtension
                 Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!)
             ),
             SecurityAlgorithms.HmacSha256);
+
 
     public static JwtSecurityToken CreateJwtToken(this IEnumerable<Claim> claims, IConfiguration configuration)
     => new JwtSecurityToken(
@@ -45,6 +47,7 @@ public static class JwtAuthExtension
         rng.GetBytes(randomNumber);
         return Convert.ToBase64String(randomNumber);
     }
+
 
     public static ClaimsPrincipal? GetPrincipalFromExpiredToken(this IConfiguration configuration, string? token)
     {

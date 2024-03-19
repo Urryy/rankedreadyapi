@@ -21,14 +21,14 @@ public static class InjectAuthorization
             opt.SaveToken = true;
             opt.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
             {
-                ValidateIssuer = true,
-                ValidateAudience = true,
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = configuration["Jwt:Issuer"]!,
                 ValidAudience = configuration["Jwt:Audience"]!,
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!)),
                 ClockSkew = TimeSpan.Zero,
+                ValidateIssuer = false,
+                ValidateAudience = false,
             };
         });
         services.AddAuthorization(opt => opt.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)

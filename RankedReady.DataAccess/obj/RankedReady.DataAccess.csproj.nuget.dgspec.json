@@ -67,10 +67,6 @@
             "Stripe.net": {
               "target": "Package",
               "version": "[43.18.0, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[7.4.1, )"
             }
           },
           "imports": [
@@ -148,10 +144,6 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.16, )"
-            },
-            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
-              "target": "Package",
-              "version": "[7.4.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

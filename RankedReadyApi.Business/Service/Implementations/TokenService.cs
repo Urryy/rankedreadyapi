@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using RankedReadyApi.Business.Service.Interfaces;
 using RankedReadyApi.Common.DataTransferObjects.User;
+using RankedReadyApi.Common.Entities;
+using RankedReadyApi.Common.Enums;
 using RankedReadyApi.DataAccess.Extensions;
 using System.IdentityModel.Tokens.Jwt;
 

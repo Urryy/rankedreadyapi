@@ -60,10 +60,6 @@
               "target": "Package",
               "version": "[7.0.16, )"
             },
-            "Microsoft.IdentityModel.Protocols.OpenIdConnect": {
-              "target": "Package",
-              "version": "[7.4.1, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"

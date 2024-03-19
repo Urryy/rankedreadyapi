@@ -72,6 +72,7 @@ E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.Gen
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.AssemblyInfoInputs.cache
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.AssemblyInfo.cs
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.csproj.CoreCompileInputs.cache
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.MvcApplicationPartsAssemblyInfo.cs
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.MvcApplicationPartsAssemblyInfo.cache
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\staticwebassets\msbuild.RankedReadyApi.Microsoft.AspNetCore.StaticWebAssets.props
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\staticwebassets\msbuild.build.RankedReadyApi.props
@@ -87,4 +88,3 @@ E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\refint\RankedReady
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.pdb
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.genruntimeconfig.cache
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\ref\RankedReadyApi.dll
-E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.MvcApplicationPartsAssemblyInfo.cs
