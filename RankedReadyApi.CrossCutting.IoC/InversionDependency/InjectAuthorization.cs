@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -9,9 +10,9 @@ namespace RankedReadyApi.CrossCutting.IoC.InversionDependency;
 
 public static class InjectAuthorization
 {
-    public static IServiceCollection InjectCommonAuthorization(this IServiceCollection services, IConfiguration configuration)
+    public static WebApplicationBuilder InjectCommonAuthorization(this WebApplicationBuilder builder)
     {
-        services.AddAuthentication(opt =>
+        builder.Services.AddAuthentication(opt =>
         {
             opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
             opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -23,16 +24,16 @@ public static class InjectAuthorization
             {
                 ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
-                ValidIssuer = configuration["Jwt:Issuer"]!,
-                ValidAudience = configuration["Jwt:Audience"]!,
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]!)),
+                ValidIssuer = builder.Configuration["Jwt:Issuer"]!,
+                ValidAudience = builder.Configuration["Jwt:Audience"]!,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)),
                 ClockSkew = TimeSpan.Zero,
                 ValidateIssuer = false,
                 ValidateAudience = false,
             };
         });
-        services.AddAuthorization(opt => opt.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
+        builder.Services.AddAuthorization(opt => opt.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme)
                     .RequireAuthenticatedUser().Build());
-        return services;
+        return builder;
     }
 }

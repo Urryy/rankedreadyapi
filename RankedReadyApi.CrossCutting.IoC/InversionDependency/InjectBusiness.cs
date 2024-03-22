@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -12,13 +13,14 @@ namespace RankedReadyApi.CrossCutting.IoC.InversionDependency;
 
 public static class InjectBusiness
 {
-    public static IServiceCollection ConnectBusiness(this IServiceCollection services, IConfiguration configuration)
+    public static WebApplicationBuilder ConnectBusiness(this WebApplicationBuilder builder)
     {
-        services.InjectEmailServices();
-        services.InjectServices();
-        services.InjectAccessors();
-        services.InjectLogging();
-        return services;
+        builder.Services.InjectEmailServices();
+        builder.Services.InjectServices();
+        builder.Services.InjectAccessors();
+        builder.Services.InjectLogging();
+        builder.Services.AddControllers();
+        return builder;
     }
 
     private static void InjectEmailServices(this IServiceCollection services)

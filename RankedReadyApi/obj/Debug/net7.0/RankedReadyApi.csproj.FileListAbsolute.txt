@@ -88,3 +88,5 @@ E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\refint\RankedReady
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.pdb
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\RankedReadyApi.genruntimeconfig.cache
 E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\obj\Debug\net7.0\ref\RankedReadyApi.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\bin\Debug\net7.0\Consul.dll
+E:\EGZAMIN.NET\RankedReadyApi\RankedReadyApi\bin\Debug\net7.0\Winton.Extensions.Configuration.Consul.dll
