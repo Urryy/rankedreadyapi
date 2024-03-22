@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,13 +30,13 @@ namespace RankedReadyApi.CrossCutting.IoC.InversionDependency;
 
 public static class InjectDataAccess
 {
-    public static IServiceCollection ConnectDataAccess(this IServiceCollection services, IConfiguration configuration)
+    public static WebApplicationBuilder ConnectDataAccess(this WebApplicationBuilder builder)
     {
-        InjectDataBase(services, configuration);
-        InjectAutomapper(services);
-        InjectRepositories(services);
-        InjectValidators(services);
-        return services;
+        InjectDataBase(builder.Services, builder.Configuration);
+        InjectAutomapper(builder.Services);
+        InjectRepositories(builder.Services);
+        InjectValidators(builder.Services);
+        return builder;
     }
     private static void InjectDataBase(this IServiceCollection services, IConfiguration configuration)
     {

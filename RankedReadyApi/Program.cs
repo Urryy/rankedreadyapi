@@ -1,15 +1,16 @@
+using RankedReadyApi.Configure;
 using RankedReadyApi.CrossCutting.IoC.BuilderApplication;
 using RankedReadyApi.CrossCutting.IoC.InversionDependency;
 using RankedReadyApi.Extension;
 
-var builder = WebApplication.CreateBuilder(args);
-builder.Services.ConnectDataAccess(builder.Configuration)
-                .InjectCommonAuthorization(builder.Configuration)
-                .ConnectBusiness(builder.Configuration)
-                .AddControllers();
+var builder = WebApplication.CreateBuilder(args)
+                    .ConfigureBuilder()
+                    .ConnectDataAccess()
+                    .InjectCommonAuthorization()
+                    .ConnectBusiness();
 
-var app = builder.Build();
-app.RegisterEndpoints()
-   .ConfigureApplication()
-   .Run();
+builder.Build()
+    .RegisterEndpoints()
+    .ConfigureApplication()
+    .Run();
 
